@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/ky/Sites/valet/copesacontent/web/app/plugins/gutenberg/packages/components/src/primitives/index.js"],"names":[],"mappings":";;;;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA","sourcesContent":["export * from './svg';\n"]}

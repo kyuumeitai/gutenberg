@@ -1,0 +1,33 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.unregisterFormatType = unregisterFormatType;
+
+var _data = require("@wordpress/data");
+
+/**
+ * WordPress dependencies
+ */
+
+/**
+ * Unregisters a format.
+ *
+ * @param {string} name Format name.
+ *
+ * @return {?WPFormat} The previous format value, if it has been successfully
+ *                     unregistered; otherwise `undefined`.
+ */
+function unregisterFormatType(name) {
+  var oldFormat = (0, _data.select)('core/rich-text').getFormatType(name);
+
+  if (!oldFormat) {
+    window.console.error("Format ".concat(name, " is not registered."));
+    return;
+  }
+
+  (0, _data.dispatch)('core/rich-text').removeFormatTypes(name);
+  return oldFormat;
+}
+//# sourceMappingURL=unregister-format-type.js.map
